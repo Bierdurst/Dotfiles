@@ -1,0 +1,49 @@
+
+#IMAP
+macro  pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview' 
+
+#IMAP USER
+set imap_user=lukas.hoernig@posteo.de
+
+#IMAP PASS
+#will propted
+
+set folder=imaps://posteo.de:993
+set spoolfile=+INBOX
+
+mailboxes =INBOX 
+set imap_check_subscribed
+
+# Store message headers locally to speed things up.
+# If hcache is a folder, Mutt will create sub cache folders for each account which may speeds things up even more.
+set header_cache = ~/.cache/mutt
+
+# Store messages locally to speed things up, like searching message bodies.
+# Can be the same folder as header_cache.
+# This will cost important disk usage according to your e-mail amount.
+set message_cachedir = "~/.cache/mutt"
+
+# Specify where to save and/or look for postponed messages.
+set postponed = +[Gmail]/Drafts
+
+# Allow Mutt to open new imap connection automatically.
+unset imap_passive
+
+# Keep IMAP connection alive by polling intermittently (time in seconds).
+set imap_keepalive = 300
+
+# How often to check for new mail (time in seconds).
+set mail_check = 120
+
+set record = +Sent
+set my_pass=Buena$face4scale
+set my_user=lukas.hoernig@posteo.de
+
+set realname = 'Lukas Hörnig'
+set from = lukas.hoernig@posteo.de
+set use_from = yes
+
+set smtp_url=smtp://lukas.hoernig@posteo.de@posteo.de:587/
+set ssl_force_tls=yes
+
+
